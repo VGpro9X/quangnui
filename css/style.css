@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+
+.v-header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: cornsilk;
+}
+
+.container {
+    max-width: 960px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+.fullscreen-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fullscreen-video video {
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #225470;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.header-content {
+    z-index: 2;
+}
+
+.header-content h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.header-content p {
+    display: block;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.button {
+    background: #34b3a0;
+    color: cornsilk;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+@media(max-width: 960px) {
+    .container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+/* Nav Bar */
+.nav-bar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 2;
+}
+img {
+    position: absolute;
+    right: 200px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline;    
+}
+
+a {
+    font-size: 100%;
+    color: lavender;
+    text-decoration: none;
+    padding-right: 1rem;
+}
+
+a:hover {
+    font-weight: bolder;
+    color: lawngreen;
+}
+
+/* Form */
+
+form {
+    background: rgb(221, 218, 218);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0 20px 0;
+}
+
+.form {
+    position: relative;
+    width: 40%;
+    height: 3rem;
+    overflow: hidden;
+}
+
+.form input {
+    width: 100%;
+    height: 100%;
+    color: black;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+}
+
+.form label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black;
+}
+
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+    transform: translateY(-125%);
+    font-size: 14px;
+    color: #5fa8d3;
+}
+
+.form input:focus + .label-name::after, 
+.form input:valid + .label-name::after {
+    transform: translateX(0%);
+}
+
+button {
+    font-size: 100%;
+    font-weight: bold;
+    background-color: orangered;
+    color: cornsilk;
+    border-radius: 10px;
+}
+/* Main Contents */
+section {
+    background: lightgrey;
+    padding-bottom: 1rem    ;
+    margin: 0;
+}
+/* Text Animation */
+h1.beautiful-text {
+    display: inline;
+    background-image: url(https://i.imgur.com/fDpv14S.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moveBG 10s linear infinite;
+    -webkit-animation: moveBG 10s linear infinite;
+    font-size: 4rem;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+.beautiful-text {
+    display: inline;
+    background-image: url(https://i.imgur.com/Bhv65cn.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moveBG 10s linear infinite;
+    -webkit-animation: moveBG 10s linear infinite;
+}
+
+#facebook {
+    display: inline;
+    background-image: url(https://i.imgur.com/jhJGOaH.jpg);
+    animation: moveBG 10s linear infinite;
+    -webkit-animation: moveBG 10s linear infinite;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: thistle;
+}
+
+#zalo {
+    display: inline;
+    background-image: url(https://i.imgur.com/jhJGOaH.jpg);
+    animation: moveBG 10s linear infinite;
+    -webkit-animation: moveBG 10s linear infinite;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: thistle;
+}
+
+#email {
+    display: inline;
+    background-image: url(https://i.imgur.com/7j88r9b.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moveBG 10s linear infinite;
+    -webkit-animation: moveBG 10s linear infinite;
+    font-size: 1.2rem;
+}
+
+@keyframes moveBG {
+    0% {
+        background-position: 0% 30%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* footer */
+footer {
+    margin: 0;
+    padding: 0;
+    background: rgb(31, 30, 30);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.footer {
+    color: lightyellow;
+    font-weight: bold;
+    padding: 1.5rem 0 1.5rem 0;
+    border-bottom: 3px solid red;
+}
+
+p {
+    margin: 0;
+}
+
+span {
+    color: orangered;
+}
+
+em {
+    color: lightblue;
+}
